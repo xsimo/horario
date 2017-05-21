@@ -10,11 +10,11 @@ C'est pourquoi, le choix de cours est pour moi un enjeu majeur afin de me libér
 La fonction "objectif" à minimiser est donc le nombre de jours par semaine ou l'étudiant suis des cours
 Il s'agit donc de trouver le meilleur agencement de cours sujet aux contrantes suivantes:
 
-# Un des cours doit être [Principes des sytèmes d'exploitation][2]
-# Un des cours doit être [Applications et interfaces homme-machine][3]
-# Les 2 autres cours doivent être choisis et ce parmi[les cours offerts en licence 3](licence.md "licence 3 jussieu")  (*Je croyais au départ envisageable de planifier [des unités d'enseignement de niveau master](master.md "master 1 jussieu") comme ce fut le cas à l'automne 2009 mais je m'en suis tenu à celles de la licence pour différentes raisons administratives entre autres.*).
-# Les 2 cours à options sont en outre sensé plus ou moins équivaloir à 2 [cours à options de l'Université de Montréal](bac.md "bac UdeM") et doivent me permettre d'élargir mes horizons en vue du 2e cycle.
-# Il faut aussi choisir un horaire pour ces cours dans [l'emploi du temps de la licence](PlanningL3S2.pdf "planning l3s2") en tant que tel.
+1. Un des cours doit être [Principes des sytèmes d'exploitation][2]
+2. Un des cours doit être [Applications et interfaces homme-machine][3]
+3. Les 2 autres cours doivent être choisis et ce parmi[les cours offerts en licence 3](http://github.com/xsimo/horario/blob/master/licence.md "licence 3 jussieu")  (*Je croyais au départ envisageable de planifier [des unités d'enseignement de niveau master](http://github.com/xsimo/horario/blob/master/master.md "master 1 jussieu") comme ce fut le cas à l'automne 2009 mais je m'en suis tenu à celles de la licence pour différentes raisons administratives entre autres.*).
+4. Les 2 cours à options sont en outre sensé plus ou moins équivaloir à 2 [cours à options de l'Université de Montréal](http://github.com/xsimo/horario/blob/master/bac.md "bac UdeM") et doivent me permettre d'élargir mes horizons en vue du 2e cycle.
+5. Il faut aussi choisir un horaire pour ces cours dans [l'emploi du temps de la licence](PlanningL3S2.pdf "planning l3s2") en tant que tel.
 
 **Résolution**
 
