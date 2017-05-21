@@ -1,0 +1,1054 @@
+
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><head>
+<!-- default_generate_header_for_anonymous -->
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="author" content="Christian.Queinnec@nospam.please.lip6.fr">
+  <meta name="GENERATOR" content="Emacs">
+  <meta name="keywords" content="DBUFR-generated">
+  <meta name="description" content="Notes et inscriptions">
+  <link rel="meta" type="application/rdf+xml" title="FOAF" 
+href="http://www-spi.lip6.fr/%7Equeinnec/index.rdf">
+  <meta name="foaf:maker" content="foaf:mbox_sha1sum 
+ff50ddc266c83142b131c57c612c28c14e6bb110">
+  <meta name="MSsmarttagsPreventParsing" content="true">
+  <meta http-equiv="imagetoolbar" content="no">
+  <meta name="Author" content="bruno.lesueur@ufr-info-p6.jussieu.fr">   
+  <style>
+/* $Id: dbufr.css,v 1.8 2005/11/16 20:07:04 queinnec Exp $ 
+   Le style commun des pages. Couleurs tirees de la charte de l'upmc
+
+couleur principale: #6AB239 vert             #29CEF6
+couleur lien:       #ff6918 orange           #FF1400
+couleur annotation: #???         FIXME
+
+Autres couleurs charte upmc: 
+    #414441 gris, #FF1400 orange, #29798B bleu petrole, #29CEF6 bleu ciel
+    #FF1400 ou #FF1800 rouge, #6A6973 gris fond, #C5CEC5 gris clair,
+    #6AB239 vert
+
+ */
+
+body {
+  background-color: #ffffff;
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+}
+
+/* Styles pour transparents QncSlides */
+.Slide { 
+   border: solid thin #29cef6;
+   margin-top: 5px;
+   margin-bottom: 10px;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+.SlideTitle {
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 120%;
+  color: #29cef6 ;
+  margin-bottom: 10px;
+}
+.SlideNumber {
+  display: inline;
+  font-family: serif ;
+  text-align: right;
+  width: 20%;
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 150%;
+  color: #ffffff ;
+  background-color: #29cef6 ;
+}
+
+h1 {
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+  display: block;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  font-size: 150%;
+  font-weight: bold;
+  color: #29CEF6 ;
+  background-color: #ffffff ;
+  border: solid #29CEF6 2px;
+}
+
+h2, .topicHeader {
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+  display: block;
+  text-align: left;
+  margin: 0;
+  padding: 10px;
+  font-size: 120%;
+  color: #29cef6 ;
+  /* background-color: #ffffff ; inherit from body rather! */
+  border-bottom: solid #29CEF6 1px;
+}
+.topicSpanHeader  {
+  font-family: serif ;
+  text-align: center;
+  padding: 10px;
+  font-size: 170%;
+  color: #ffffff ;
+  background-color: #29cef6 ;  
+}
+
+h3, .subtopicheader {
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+  display: block;
+  width: 85%;
+  text-align: left;
+  padding: 10px;
+  font-size: 120%;
+  color: #29cef6 ;
+}
+.subtopicSpanHeader {
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+  text-align: center;
+  padding: 10px;
+  font-size: 120%;
+  color: #29cef6 ;
+} 
+
+a {
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ff1400;
+  /* font-weight: bold; */
+}
+a:hover {
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  text-decoration: underline;
+  font-weight: bold;
+  color: #ff1400;
+}
+
+pre, .divjava, .divscheme, .divsh, .divcode, .divhtml, .divperl, .divc, .divada, .divphp, .divascii, .divasciiart {
+  font-family: monospace ;
+  font-weight: bold;
+  font-size: 100%;
+  white-space: pre;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: #006699;
+  /* background-color: #FFFFCC; */
+  background-color: #d5eac6;
+  border: solid thin #29cef6;
+  text-align: left;
+}
+
+/* Style pour les CFS 
+   Cf. ~/Cours/Licence/CFS/src/cfs.css
+*/
+
+.CFSKIT .WARNING {
+  color: orange;
+}
+
+.CFSKIT .ERROR {
+  color: red;
+}
+
+.CFSKIT .ECHO {
+  font-family: serif;
+  color: black;
+}
+
+.CFSKIT .FILE {
+  font-family: monospace;
+  white-space: pre;
+  border: thin solid #29cef6;
+  padding: 5px;
+  margin: 5px;
+}
+
+.CFSKIT .OUT {
+  font-family: monospace;
+  margin-top: 10px;
+}
+
+.CFSKIT .ERR {
+  font-family: monospace;
+  color: red;
+  margin-top: 10px;
+}
+
+.CFSKIT .STDOUT {
+  font-family: monospace;
+  margin-top: 10px;
+  white-space: pre;
+  border: thin solid #29cef6;
+  padding: 5px;
+  margin: 5px;
+}
+
+.CFSKIT .STDERR {
+  font-family: monospace;
+  color: red;
+  margin-top: 10px;
+  white-space: pre;
+  border: thin solid red;
+  padding: 5px;
+  margin: 5px;
+}
+
+.CFSKIT .MARK {
+  font-size: 150%;
+  font-weight: bold;
+  color: white;
+  background-color: #29cef6;
+}
+
+.CFSKIT .MARK_SUM {
+  font-weight: bold;
+  font-style: italic;
+  color: #29cef6;
+}
+
+.CFSKIT .CODE {
+  font-family: monospace;
+  color: white;
+  background-color: red;
+}
+
+.CFSKIT .DURATION {
+  border: thick solid #29cef6;
+  color: #29cef6;
+  padding: 5px;
+  margin: 5px;
+}
+
+.CFSKIT .UP {
+  padding-right: 10px;
+}
+
+/* Style pour FOGE2
+   Cf. ~/perl/FOGE2/foge.css
+*/
+
+.FOGE2 td.qrow01, .FOGE2 td.qrow02 {
+  vertical-align: top;
+}
+
+.FOGE2 .mandatory {
+	color: #f02;
+}
+
+/* le bouton de soumission */
+.FOGE2 .formsubmit {
+  color: #29CEF6;
+  font-size: 120%;
+  font-style: bold;
+  background-color: white;
+  border: outset 3px #29CEF6;
+}
+
+/* "prolog" text, "epilog" text */
+.FOGE2 .formhead, .FOGE2 .formfoot {
+ 	display: block;
+	padding: 10px;
+	border-width: 0px;
+	margin: 1ex 2em;
+}
+.FOGE2 .formerror {
+ 	display: block;
+	padding: 10px;
+        border: solid red 1px;
+	margin: 1ex 2em;
+        color: red;
+}
+
+/* table rows 1, 2, 3 */
+.FOGE2 .qrow01 {
+	color: #000;
+	background-color: #eee;
+	padding: 1ex;
+	/* width: 50%; */
+}
+
+/* title text, "prolog" text, "epilog" text */
+.FOGE2 .sectitle {
+	color: #29cef6;
+	background-color: #fff;
+	display: block;
+	padding: 1ex;
+	border-width: 1px;
+	border-color: #29cef6;
+	margin-top: 3em;
+}
+
+.FOGE2 .sechead, .FOGE2 .secfoot {
+	display: block;
+	padding: 1ex 10ex;
+	margin-top: 2ex;
+	text-align: justify;
+}
+
+.FOGE2 .statrow {
+	background-color: #f7f7f7;
+	padding: 1ex;
+	border: thick red;
+}
+
+.FOGE2 th.statrow {
+	text-align: center;
+}
+.FOGE2 tr.statrow {
+	text-align: right;
+}
+.FOGE2 td.stat1stcol {
+	text-align: left;
+}
+
+
+/* Les nouvelles.
+   La structure d'une nouvelle est:
+   <news><newsHeader><newsTitle>...</newsTitle>
+                     <newsCourse>...</newsCourse></newsHeader>
+         <newsSignature><newsAuthor>...</newsAuthor>
+                        <newsDate>...</newsDate></newsSignature>
+   </news>
+*/
+
+.news {
+  border: solid thin #29cef6;
+  /* color: #29cef6; */
+  font-size: 80%;
+  background-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.news .newsHeader {
+  text-align: center;
+  border-bottom: solid thin #29cef6;
+}
+.news .newsHeader a { 
+  color: black;
+}
+.news .newsTitle {
+  text-align: left;
+  font-weight: bold;
+  padding-left: 5%;
+}
+.news .newsCourse {
+  text-align: right;
+  padding-left: 5px;
+  padding-right: 5%;
+}
+.news .newsBody {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.news .newsSignature {
+  text-align: right;
+  font-family: monospace;
+  font-size: 85%;
+}
+.news .newsAuthor a {
+  color: black;
+}
+.news .newsDate {
+  margin-left: 5px;
+}
+.SlideAnnotations .news { 
+  background-color: #F6FFBC;
+}
+.AnnotationLink { 
+  text-align: center;
+}
+
+/* Styles pour menus contextuels. */
+
+.prologue {
+ width: 66%;
+}
+.Context { 
+ position: absolute; 
+ top: 0; 
+ left: 70%; 
+ width: 30%; 
+ border: solid #29cef6 1px;
+ background-color: white;
+ padding: 5 5 5 5;
+ font: 10pt monospace;
+}
+.Context .Header { 
+ text-align: center;
+ width: 90%; 
+ font-family: Verdana, Arial, Helvetica, Sans-serif ;
+ font-style: bold;
+ background-color: white;
+ color: #29cef6;
+ border: solid #29cef6 2px;
+ padding: 2px;
+ margin-bottom: 5px;
+}
+.Context .Header a { 
+ padding: 3px;
+ margin: 3px;
+}
+.Context .Menu {
+}
+.Context .Contextitem {
+ color: black;
+ padding-left: 25px;
+}
+.Context .Contextitem a {
+  color: black;
+}
+.Context .IconWithMenu { 
+   background-color: grey;
+   color: white;
+   font-size: 120%;
+   margin-top: 5px;
+   text-align: center;
+   text-decoration: none;
+}
+
+/* Styles particuliers pour entete et enpied de pages. */
+
+.Footer { 
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+  text-align: left;
+  font-size: 75%;
+  width: 100%;
+  margin-top: 20px;
+  border-top: solid #29CEF6 1px;
+}
+.printedFooter { 
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+  text-align: right;
+  font-size: 75%;
+  width: 100%;
+  margin-top: 20px;
+  border-top: solid #29CEF6 1px;
+}
+.Footer a { 
+  color: black;
+}
+.Header { 
+  /* font-size: 80%; */
+}
+.Header a { 
+  color: #29CEF6;
+  padding: 10px;
+}
+.Header h1 { 
+  width: 75%;
+}
+.Button { 
+  color: #29CEF6;
+  font-size: 120%;
+  font-weight: bold;
+  background-color: white;
+  border: outset 3px #29CEF6;
+ }
+
+.ButtonArray { 
+  font-weight: normal;
+}
+.StudentName { 
+  font-size: 120%;
+  font-weight: bold;
+}
+
+/* Light buttons used for links using POST methods. They look nearly the
+   same as LightButton (see below). */
+.LightButtonS { 
+  font-size: 100%;
+  border: solid 0px #29CEF6;
+  text-align: center;
+  font-weight: bold;
+}
+.LightButtonS .LightButtonSinput { 
+  font-size: 100%;
+  border: solid 1px #29CEF6;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  padding: 1px;
+}
+.LightButtonS .LightButtonSinput:hover { 
+  font-size: 100%;
+  border: solid 1px #29CEF6;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #29CEF6;
+  padding: 1px;
+}
+
+/* Light buttons used for links using GET methods */
+.LightButton { 
+  font-size: 100%;
+  background-color: white;
+  border: solid 1px #29CEF6;
+  text-align: center;
+}
+.LightButton a { 
+  color: black;
+  text-decoration: none;
+}
+.LightButton a:hover { 
+  color: white;
+  background-color: #29CEF6;
+  text-decoration: none;
+  font-weight: bold;
+}
+.Problem { 
+  color: #ff1400;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+}
+.Warning { 
+  color: purple;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+  border: solid thin purple;
+}
+.WarningBG { 
+  background-color: pink;
+  color: blue ;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 100%;
+  font-weight: bold;
+  text-align: center;
+  border: solid thin purple;
+}
+.Table {  
+  background-color: white;
+  border: solid 1px #29CEF6;
+}
+.IconWithMenu { 
+   background-color: #29CEF6;
+   color: white;
+   font-size: 120%;
+   margin-top: 10px;
+   text-align: center;
+}
+.LastUpdate { 
+   font-family: monospace;
+   font-size: 75%;
+   text-align: right;
+}
+.Bandeau { 
+   background-color: #eee;
+}
+
+.BandeauHC {
+   background-color: #ffefd5;
+}
+
+.Bandeau th { 
+   border-bottom: solid 1px #29CEF6;
+}
+.Ligne { 
+   border-top: solid 1px #29CEF6;
+}
+.LigneInvalide { 
+   border-top: solid 1px #29CEF6;
+   background-color: #e6e6ff;  /* parme tres clair */
+}
+.LigneN {  /* pour les nombres */
+   border-top: solid 1px #29CEF6;
+   text-align: right;
+}
+.LigneDebut { 
+   border-top: solid 1px #29CEF6;
+   border-left: solid 1px #29CEF6;
+}
+.LigneFin { 
+   border-top: solid 1px #29CEF6;
+   border-right: solid 1px #29CEF6;
+}
+
+/* Pour les fiches compactes */
+
+.StudentState { 
+}
+.StudentState .Table { 
+  
+}
+.StudentState .Table .Cours { 
+  text-align: left;
+  border: solid 1px #29CEF6;
+}
+.StudentState .Table .Notes { 
+  background-color: #eee;
+}
+.StudentState .Note { 
+  background-color: yellow;
+}
+.StudentState .Bloc { 
+  text-align: center;
+  border: solid 1px #29CEF6;
+}
+.StudentState .Total { 
+  text-align: center;
+  border-top: solid 1px #29CEF6;
+}
+
+/* end of deug.css */
+  </style>
+  <style>
+/* $Id#
+   Le style commun des pages a imprimer.
+ */
+
+body {
+  background-color: white;
+  font-family: Vera, Arial, serif;
+  font-size: 9pt;
+}
+
+h1 {
+  display: block;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  font-weight: bold;
+  border: solid #c3c3c3 2px;
+}
+h1 .ButtonArray { 
+  display: none;
+}
+
+h2 {
+  display: block;
+  text-align: left;
+  margin: 0;
+  padding: 10px;
+}
+
+h3 {
+  display: block;
+  text-align: left;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+pre, .divjava, .divscheme, .divsh, .divcode, .divhtml, .divperl, .divc, .divada, .divphp, .divascii, .divasciiart {
+  font-family: monospace ;
+  font-weight: bold;
+  font-size: 100%;
+  white-space: pre;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 5px;
+  color: #006699;
+  /* background-color: #FFFFCC; */
+  background-color: #d5eac6;
+  border: solid thin #29cef6;
+  text-align: left;
+}
+
+/* Les nouvelles.
+   La structure d'une nouvelle est:
+   <news><newsHeader><newsTitle>...</newsTitle>
+                     <newsCourse>...</newsCourse></newsHeader>
+         <newsSignature><newsAuthor>...</newsAuthor>
+                        <newsDate>...</newsDate></newsSignature>
+   </news>
+*/
+
+.news {
+  border: solid thin #29cef6;
+  /* color: #29cef6; */
+  font-size: 80%;
+  background-color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.news .newsHeader {
+  text-align: center;
+  border-bottom: solid thin #29cef6;
+}
+.news .newsHeader a { 
+  color: black;
+}
+.news .newsTitle {
+  text-align: left;
+  font-weight: bold;
+  padding-left: 5%;
+}
+.news .newsCourse {
+  text-align: right;
+  padding-left: 5px;
+  padding-right: 5%;
+}
+.news .newsBody {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.news .newsSignature {
+  text-align: right;
+  font-family: monospace;
+  font-size: 85%;
+}
+.news .newsAuthor a {
+  color: black;
+}
+.news .newsDate {
+  margin-left: 5px;
+}
+.SlideAnnotations .news { 
+  background-color: #F6FFBC;
+}
+.AnnotationLink { 
+  text-align: center;
+}
+
+/* Styles pour menus contextuels. */
+
+#ContextualMenu { 
+  display: none;
+}
+
+/* Styles particuliers pour entete et enpied de pages. */
+
+.Footer { 
+  display: none;
+}
+.printedFooter { 
+  font-family: Verdana, Arial, Helvetica, Sans-serif ;
+  text-align: right;
+  font-size: 75%;
+  width: 100%;
+  margin-top: 20px;
+  border-top: solid #c3c3c3 1px;
+}
+
+.Button { 
+  /* retire a cause de l'impression de setMultiUEandGroups.php */
+  display: none;
+}
+
+/* Light buttons used for links using POST methods. They look nearly the
+   same as LightButton (see below). */
+.LightButtonS { 
+  font-size: 100%;
+  border: solid 0px #c3c3c3;
+  text-align: center;
+  font-weight: bold;
+}
+.LightButtonS .LightButtonSinput { 
+  font-size: 100%;
+  border: solid 1px #c3c3c3;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  padding: 1px;
+}
+.LightButtonS .LightButtonSinput:hover { 
+  font-size: 100%;
+  border: solid 1px #c3c3c3;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #c3c3c3;
+  padding: 1px;
+}
+
+/* Light buttons used for links using GET methods */
+.LightButton { 
+  font-size: 100%;
+  background-color: white;
+  border: solid 1px #c3c3c3;
+  text-align: center;
+}
+.LightButton a { 
+  color: black;
+  text-decoration: none;
+}
+.LightButton a:hover { 
+  color: white;
+  background-color: #c3c3c3;
+  text-decoration: none;
+  font-weight: bold;
+}
+.Problem { 
+  color: #ff1400;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+}
+.Warning { 
+  color: purple;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-size: 120%;
+  font-weight: bold;
+  text-align: center;
+  border: solid thin purple;
+}
+.Table {  
+  background-color: white;
+  border: solid 1px #c3c3c3;
+}
+.IconWithMenu { 
+   background-color: #c3c3c3;
+   color: white;
+   font-size: 120%;
+   margin-top: 10px;
+   text-align: center;
+}
+.LastUpdate { 
+   font-family: monospace;
+   font-size: 75%;
+   text-align: right;
+}
+.Bandeau { 
+   background-color: #c3c3c3;
+}
+.Bandeau th { 
+   border-bottom: solid 1px #c3c3c3;
+}
+.Ligne { 
+   border-top: solid 1px #c3c3c3;
+}
+.LigneN {  /* pour les nombres */
+   border-top: solid 1px #c3c3c3;
+   text-align: right;
+}
+.LigneDebut { 
+   border-top: solid 1px #c3c3c3;
+   border-left: solid 1px #c3c3c3;
+}
+.LigneFin { 
+   border-top: solid 1px #c3c3c3;
+   border-right: solid 1px #c3c3c3;
+}
+
+/* Pour les fiches compactes */
+
+.StudentState { 
+}
+.StudentState .Table { 
+}
+.StudentState .Table tr { 
+  border: solid 1px #c3c3c3;
+}
+.StudentState .Table .Cours { 
+  text-align: left;
+}
+.StudentState .Table .Notes { 
+  border: solid 1px #c3c3c3;
+}
+
+/* end of deug.css */
+  </style>
+  <link rel="shortcut icon" type="image/png" 
+href="https://www-dbufr.ufr-info-p6.jussieu.fr/lmd/2009/dbufr2/public/dbufr16x16.png">
+  <title> Notes et inscriptions </title>
+</head><body>
+  <div class="Header">
+    <table border="0">
+      <tbody><tr><td width="25%"><table border="0">
+               <tbody><tr><td><a href="http://www.upmc.fr/">UPMC</a></td></tr>
+               <tr><td><a href="http://www.ufr-info-p6.jussieu.fr/">UFR 
+d'informatique</a></td></tr>
+               <tr><td><a href="http://www.infop6.jussieu.fr/">Serveur 
+pédagogique</a></td></tr></tbody></table></td>
+          <td width="75%"><h1>Notes et inscriptions</h1></td></tr></tbody></table></div>
+
+<p> 
+Suite à une demande écrite de la <a href="http://www.cnil.fr/">CNIL</a>
+(saisine 04004711) il n'est pas possible d'afficher publiquement, sur 
+Internet, d'informations nominatives (par exemple des notes associées à 
+des 
+noms). Cette page requiert donc que vous vous authentifiiez pour 
+consulter
+vos notes et/ou inscriptions pédagogiques. <!--'-->
+</p>
+
+<p> Cette page présente les inscriptions et notes de <strong>ARAME, 
+simon</strong> telles que connues et 
+affichées au 16 juin 2010 10:54. Ces notes
+sont temporaires et ne sont données qu'à titre purement<!--'-->
+indicatif. Ce relevé de notes ne constitue en aucun cas une attestation 
+de notes ou de diplôme.  En cas de contestation, veuillez vous adresser
+à l'enseignant responsable concerné.<!--'-->
+</p>
+
+<p>
+Si vos inscriptions ou vos notes ne correspondent à votre position, 
+veuillez
+en informer le plus vite possible le secrétariat pédagogique dont vous 
+relevez (le secrétariat de licence ou celui de master). Ces notes et 
+inscriptions ne vous concernent que par rapport à l'EFU d'informatique.
+Les autres UE (ou notes) que vous pouvez suivre (ou obtenir) n'y 
+figurent pas.
+</p>
+
+<h2> Inscriptions pédagogiques </h2>
+
+<p> Voici vos inscriptions pédagogiques:
+
+</p><div align="center"><table class="Table">
+<tbody><tr><th class="Bandeau">Groupe</th>
+    <th class="Bandeau">UE</th>
+    <th class="Bandeau">Période</th>
+    <th class="Bandeau">Titre</th>
+</tr><tr>
+<td> gr1 </td>
+<td><a href="http://www.infop6.jussieu.frdbufr_www_path/master/ue/"> 
+LI353 </a></td>
+<td> 2010fev </td>
+<td> Modélisation et résolution de problèmes </td>
+</tr><tr>
+<td> gr1 </td>
+<td><a href="http://www.infop6.jussieu.frdbufr_www_path/master/ue/"> 
+LI342 </a></td>
+<td> 2009oct </td>
+<td> Introduction à la modélisation des systèmes logiciels avec UML </td>
+</tr><tr>
+<td> gr1 </td>
+<td><a href="http://www.infop6.jussieu.frdbufr_www_path/master/ue/"> 
+LI344 </a></td>
+<td> 2010fev </td>
+<td> Applications et interfaces homme-machine </td>
+</tr><tr>
+<td> gr2 </td>
+<td><a href="http://www.infop6.jussieu.frdbufr_www_path/master/ue/"> 
+LI325 </a></td>
+<td> 2010fev </td>
+<td> Conception d'algorithmes et applications </td>
+</tr><tr>
+<td> gr2 </td>
+<td><a href="http://www.infop6.jussieu.frdbufr_www_path/master/ue/"> 
+LI341 </a></td>
+<td> 2009oct </td>
+<td> Bases de données </td>
+</tr><tr>
+<td> gr2 (non stl) </td>
+<td><a href="http://www.infop6.jussieu.frdbufr_www_path/master/ue/"> 
+MI017 </a></td>
+<td> 2009oct </td>
+<td> Ingénierie du logiciel </td>
+</tr><tr>
+<td> gr3 </td>
+<td><a href="http://www.infop6.jussieu.frdbufr_www_path/master/ue/"> 
+LI324 </a></td>
+<td> 2010fev </td>
+<td> Principes des systèmes d'exploitation </td>
+</tr><tr>
+<td> gr3 </td>
+<td><a href="http://www.infop6.jussieu.frdbufr_www_path/master/ue/"> 
+LI311 </a></td>
+<td> 2009oct </td>
+<td> Algorithmique </td>
+</tr><tr>
+<td>  </td>
+<td><a href="http://www.infop6.jussieu.frdbufr_www_path/master/ue/"> 
+LI351 </a></td>
+<td> 2010fev </td>
+<td> Introduction à l'Intelligence Artificielle </td>
+</tr></tbody></table></div><p></p>
+
+<h2> Notes </h2>
+
+<p>
+La catégorie « cc-total » représente la note total de contrôle continu.
+</p>
+
+<p> Et voici vos notes publiées: 
+
+</p><div align="center"><table class="Table">
+<tbody><tr><th class="Bandeau">UE</th>
+    <th class="Bandeau">Contrôle</th>
+    <th class="Bandeau">Note</th>
+</tr>
+<tr><td class="Ligne">LI311-2009oct</td><td class="Ligne">[partiel] 
+partiel</td><td class="Ligne" align="right"><strong>15.5</strong>/20</td></tr><tr><td
+ class="Ligne">LI311-2009oct</td><td class="Ligne">[devoir] Mini-projet</td><td
+ class="Ligne" align="right"><strong>17</strong>/20</td></tr><tr><td 
+class="Ligne">LI311-2009oct</td><td class="Ligne">[examen] examen</td><td
+ class="Ligne" align="right"><strong>12</strong>/20</td></tr><tr><td 
+class="Ligne">LI324-2010fev</td><td class="Ligne">[partiel] creation du 
+12-05-2010-108</td><td class="Ligne" align="right"><strong>20</strong>/20</td></tr><tr><td
+ class="Ligne">LI324-2010fev</td><td class="Ligne">[examen] creation du 
+12-05-2010-112</td><td class="Ligne" align="right"><strong>14.125</strong>/20</td></tr><tr><td
+ class="Ligne">LI325-2010fev</td><td class="Ligne">[examen] examen</td><td
+ class="Ligne" align="right"><strong>14</strong>/20</td></tr><tr><td 
+class="Ligne">LI325-2010fev</td><td class="Ligne">[partiel] 22/03/10</td><td
+ class="Ligne" align="right"><strong>16.5</strong>/20</td></tr><tr><td 
+class="Ligne">LI325-2010fev</td><td class="Ligne">[devoir a la maison] 
+projet</td><td class="Ligne" align="right"><strong>17</strong>/20</td></tr><tr><td
+ class="Ligne">LI325-2010fev</td><td class="Ligne">[interrogation 
+ecrite] interrogation ecrite</td><td class="Ligne" align="right"><strong>13.5</strong>/20</td></tr><tr><td
+ class="Ligne">LI325-2010fev</td><td class="Ligne">[cc-total] </td><td 
+class="Ligne" align="right"><strong>16.1</strong>/20</td></tr><tr><td 
+class="Ligne">LI341-2009oct</td><td class="Ligne">[participation] 
+présence</td><td class="Ligne" align="right"><strong>4</strong>/5</td></tr><tr><td
+ class="Ligne">LI341-2009oct</td><td class="Ligne">[interrogation 
+ecrite] QCM</td><td class="Ligne" align="right"><strong>12.75</strong>/15</td></tr><tr><td
+ class="Ligne">LI341-2009oct</td><td class="Ligne">[TD] participation 
+TD/TME, interros, tableau</td><td class="Ligne" align="right"><strong>9</strong>/10</td></tr><tr><td
+ class="Ligne">LI341-2009oct</td><td class="Ligne">[examen] examen 
+première session</td><td class="Ligne" align="right"><strong>34.5</strong>/70</td></tr><tr><td
+ class="Ligne">LI341-2009oct</td><td class="Ligne">[cc-total] CC total</td><td
+ class="Ligne" align="right"><strong>25.75</strong>/30</td></tr><tr><td 
+class="Ligne">LI342-2009oct</td><td class="Ligne">[examen] creation du 
+09-09-2009-112</td><td class="Ligne" align="right"><strong>10.4</strong>/20</td></tr><tr><td
+ class="Ligne">LI342-2009oct</td><td class="Ligne">[TME solitaire] 
+creation du 09-09-2009-477</td><td class="Ligne" align="right"><strong>10</strong>/20</td></tr><tr><td
+ class="Ligne">LI342-2009oct</td><td class="Ligne">[partiel] creation du
+ 09-09-2009-108</td><td class="Ligne" align="right"><strong>16.15</strong>/20</td></tr><tr><td
+ class="Ligne">LI344-2010fev</td><td class="Ligne">[devoir a la maison] 
+éditeur</td><td class="Ligne" align="right"><strong>13</strong>/20</td></tr><tr><td
+ class="Ligne">LI344-2010fev</td><td class="Ligne">[examen] examen</td><td
+ class="Ligne" align="right"><strong>13.5</strong>/20</td></tr><tr><td 
+class="Ligne">LI344-2010fev</td><td class="Ligne">[devoir a la maison] 
+explorateur</td><td class="Ligne" align="right"><strong>15</strong>/20</td></tr><tr><td
+ class="Ligne">LI344-2010fev</td><td class="Ligne">[cc-total] </td><td 
+class="Ligne" align="right"><strong>14.4</strong>/20</td></tr><tr><td 
+class="Ligne">LI353-2010fev</td><td class="Ligne">[partiel] partiel</td><td
+ class="Ligne" align="right"><strong>14</strong>/20</td></tr><tr><td 
+class="Ligne">LI353-2010fev</td><td class="Ligne">[epreuve] note écrit 
+(examen)</td><td class="Ligne" align="right"><strong>12.5</strong>/20</td></tr><tr><td
+ class="Ligne">LI353-2010fev</td><td class="Ligne">[Epreuve TP] note des
+ TME Choco</td><td class="Ligne" align="right"><strong>16.5</strong>/20</td></tr><tr><td
+ class="Ligne">LI353-2010fev</td><td class="Ligne">[epreuve] note 
+programmation</td><td class="Ligne" align="right"><strong>16.5</strong>/20</td></tr><tr><td
+ class="Ligne">LI353-2010fev</td><td class="Ligne">[cc-total] 
+1/2*Partiel + 1/2*TME</td><td class="Ligne" align="right"><strong>15.25</strong>/20</td></tr><tr><td
+ class="Ligne">LI353-2010fev</td><td class="Ligne">[examen] 0,5*écrit + 
+0,5*programmation</td><td class="Ligne" align="right"><strong>14.5</strong>/20</td></tr><tr><td
+ class="Ligne">MI017-2009oct</td><td class="Ligne">[examen-reparti-1] 
+creation du 27-11-2009-533161</td><td class="Ligne" align="right"><strong>16.7</strong>/20</td></tr><tr><td
+ class="Ligne">MI017-2009oct</td><td class="Ligne">[examen-reparti-2] 
+creation du 06-01-2010-533162</td><td class="Ligne" align="right"><strong>11.75</strong>/20</td></tr></tbody></table></div><p></p>
+
+<!-- default_generate_footer_for_anonymous -->
+<div class="Footer">
+ <a href="mailto:bruno.lesueur@ufr-info-p6.jussieu.fr">Remarques?</a>&nbsp;&nbsp;&nbsp;
+
+ <tt>$Id: seeStudentMarks.php,v 1.11 2005/01/19 07:28:38 queinnec Exp $</tt></div></body></html>
